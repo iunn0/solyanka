@@ -10,6 +10,8 @@ public:
 
 	~Triangle();
 
+	void setH(int he);
+
 	void drawHeight();
 
 	void drawWidth();
