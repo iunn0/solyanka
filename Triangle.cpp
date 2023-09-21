@@ -2,11 +2,15 @@
 #include "Triangle.h"
 
 Triangle::Triangle(int h, int w)
-	: height(h), width(w)
+	: height(0), width(0)
 {
 	std::cout << "Triangle created" << std::endl;
+	setValues(h, w);
 	std::cout << std::endl;
 }
+
+Triangle::Triangle(int h)
+	: Triangle(h, 0) { }
 
 Triangle::~Triangle()
 {
@@ -14,7 +18,16 @@ Triangle::~Triangle()
 	std::cout << std::endl;
 }
 
-void Triangle::drawHeight()
+void Triangle::setValues(int h, int w)
+{
+	if (h > 0 && w > 0) {
+		height = h;
+		width = w;
+	}
+	else { std::cout << "Values cannot be negative" << std::endl; }
+}
+
+void Triangle::drawByHeight()
 {
 	for (size_t i = 0; i < height; i++){
 		for (size_t j = 0; j <= i; j++){
@@ -25,7 +38,7 @@ void Triangle::drawHeight()
 	std::cout << std::endl;
 }
 
-void Triangle::drawWidth()
+void Triangle::drawByWidth()
 {
 	for (size_t i = width; i > 0; i--){
 		for (size_t j = 0; j < i; j++) {

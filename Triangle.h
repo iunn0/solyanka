@@ -6,15 +6,16 @@ private:
 	int width;
 
 public:
-	Triangle(int h, int w);
+	Triangle(int h = 0, int w = 0);
+	Triangle(int h = 0);
 
 	~Triangle();
 
-	void setH(int he);
+	void setValues(int h, int w);
 
-	void drawHeight();
+	void drawByHeight();
 
-	void drawWidth();
+	void drawByWidth();
 
 	float Area();
 };

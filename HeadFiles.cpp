@@ -8,25 +8,26 @@ int factorial(int);
 
 int main()
 {
-  //  Show();
+	/*Show();
 
-    //const int SIZE = 5;
-    //int arr[SIZE] = { 1,7 , 78, 21 ,5 };
+    const int SIZE = 5;
+    int arr[SIZE] = { 1,7 , 78, 21 ,5 };
 
-    //showSort(arr, SIZE);
+    showSort(arr, SIZE);
 
-    //bubbleSort(arr, SIZE);
+    bubbleSort(arr, SIZE);
+    showSort(arr, SIZE);
 
-    //showSort(arr, SIZE);
+    std::cout << factorial(-1) << std::endl;*/
 
-  //  std::cout << factorial(5) << std::endl;
+    Triangle* ptr = new Triangle{ -1, 5};
 
-    Triangle triangle(5, 9);
+	ptr->drawByHeight();
+    ptr->drawByWidth();
 
-    triangle.drawHeight();
-    triangle.drawWidth();
+	std::cout << "Area is " << ptr->Area() << std::endl;
 
-    std::cout << "Area is " << triangle.Area() << std::endl;
+    delete ptr;
 
-    return 0;
+	return 0;
 }
