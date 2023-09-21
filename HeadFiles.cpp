@@ -3,6 +3,7 @@
 #include "BubbleSort.h"
 #include "HEADER.h"
 #include "Triangle.h"
+#include "String.h"
 
 int factorial(int);
 
@@ -20,14 +21,26 @@ int main()
 
     std::cout << factorial(-1) << std::endl;*/
 
-    Triangle* ptr = new Triangle{ -1, 5};
+    /*Triangle* ptr = new Triangle{ -1, 5};
 
 	ptr->drawByHeight();
     ptr->drawByWidth();
 
 	std::cout << "Area is " << ptr->Area() << std::endl;
 
-    delete ptr;
+    delete ptr;*/
+
+    String* str = new String{};
+
+    std::cout << str->getString() << std::endl;
+    std::cout << str->getSize() << std::endl;
+  
+    str->setString("Nigger");
+
+    std::cout << str->getString() << std::endl;
+    std::cout << str->getSize() << std::endl;
+
+    delete str;
 
 	return 0;
 }
