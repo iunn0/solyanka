@@ -1,4 +1,3 @@
-#include <cstring>
 #include "String.h"
 
 void String::Copy(const char* otherStr)
@@ -6,10 +5,15 @@ void String::Copy(const char* otherStr)
 	size_t sizeStr = 0;
 	while (otherStr[sizeStr] != '\0')
 		sizeStr++;
+	sizeStr++;
 
-	str = new char[sizeStr + 1];
+	str = new char[sizeStr];
 
-	strcpy_s(str, sizeStr + 1,otherStr);
+	for (size_t i = 0; i < sizeStr; i++)
+	{
+		str[i] = otherStr[i];
+	}
+
 }
 
 String::String()

@@ -127,16 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="binarySearch.cpp" />
     <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="factorial.cpp" />
     <ClCompile Include="HeadFiles.cpp" />
     <ClCompile Include="String.cpp" />
+    <ClCompile Include="Students.cpp" />
     <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="HEADER.h" />
     <ClInclude Include="String.h" />
+    <ClInclude Include="Students.h" />
     <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
